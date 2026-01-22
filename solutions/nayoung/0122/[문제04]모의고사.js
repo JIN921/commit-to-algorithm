@@ -1,14 +1,11 @@
-
-// 내가 풀다 만 ddong
-
 function solution(answers) {
 // 정답을 맞춘 수포자들의 번호를 담을 배열
 const answer = [];
 
 // 수포자 답안 패턴
-const supoja1 = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
-const supoja2 = [2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3, 2, 4, 2, 5];
-const supoja3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
+const supoja1 = [1, 2, 3, 4, 5];
+const supoja2 = [2, 1, 2, 3, 2, 4, 2, 5];
+const supoja3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
 
 const score = [0, 0, 0];
 
@@ -33,11 +30,9 @@ for(let i = 0; i < answers.length; i++) {
 const max = Math.max(...score);
 
 // 최고 점수를 받은 수포자 번호를 answer 배열에 담기
-// 3명의 수포자를 max와 비교
 for(let i = 0; i < 3; i++) {
     if(score[i] === max) answer.push(i + 1);
 }
-
   return { answer, score };
 }
 
