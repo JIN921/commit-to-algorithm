@@ -21,7 +21,7 @@ function solution(board, moves) {
             const doll = target.pop(); // 열의 맨 위 인형 추출 (O(1))
 
             // 3. 바구니 처리
-            if (basket.length > 0 && basket[basket.length - 1] === doll) {
+            if (basket.length > 0 && basket.at(-1) === doll) {
                 basket.pop();
                 answer += 2;
             } else {

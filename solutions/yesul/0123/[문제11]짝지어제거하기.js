@@ -5,7 +5,7 @@ function solution(s) {
         const char = s[i];
 
         // 스택의 마지막 문자가 현재 문자와 같다면 (짝이 맞으면)
-        if (stack.length > 0 && stack[stack.length - 1] === char) {
+        if (stack.length > 0 && stack.at(-1) === char) {
             stack.pop(); // 제거
         } else {
             // 짝이 안 맞으면 넣어둠
